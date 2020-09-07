@@ -15,21 +15,6 @@ TODO:
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package.
 
-To train a new SVM classifier: Use train_classifier.py. Your dataset should be like:
-```
-Dataset
-  -> id1
-    -> id1_1.jpg
-    -> id1_2.jpg
-    ...
-  -> id2
-    -> id1_1.jpg
-    -> id1_2.jpg
-    ...
-  ...
-```
-
-To recognize:
 ```bash
 pip install -r requirement.txt
 ```
@@ -48,6 +33,22 @@ Performance was evaluated on my laptop with AMD Ryzen 7 4800HS and NVIDIA GTX 16
 ## Usage
 
 Pre-trained model can be found [here](https://drive.google.com/drive/folders/18AJXgk4KyAf9sIDi--n_IMGjxZnKYuGv?usp=sharing).
+
+To train a new SVM classifier: Use train_classifier.py. Your dataset should be like:
+```
+Dataset
+  -> id1
+    -> id1_1.jpg
+    -> id1_2.jpg
+    ...
+  -> id2
+    -> id1_1.jpg
+    -> id1_2.jpg
+    ...
+  ...
+```
+
+To recognize:
 
 
 ```
