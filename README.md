@@ -1,1 +1,1 @@
-# face-recognition-realtime
+# README
