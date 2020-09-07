@@ -2,7 +2,9 @@
 
 Face Recoginition is my project of the deep learning class, which is organized by AI For Everyone (AI4E). 
 
-In this project, I have referred many face detect, face recognition model as [David Sandberg's facenet](https://github.com/davidsandberg/facenet), [InsightFace](https://github.com/deepinsight/insightface) and many other repos on github. Lastly, I end up with [Ultra-lightweight face detection model](https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB) face detector and [face.evoLVe](https://github.com/ZhaoJ9014/face.evoLVe.PyTorch) face recognizer. 
+![img](https://i.imgur.com/fuLRu4B.png)
+
+In this project, I have referred many face detect, face recognition model as [David Sandberg's facenet](https://github.com/davidsandberg/facenet), [InsightFace](https://github.com/deepinsight/insightface) and many other repos on github. Lastly, I end up with [Ultra-lightweight face detection model (ULFD)](https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB) face detector and [face.evoLVe](https://github.com/ZhaoJ9014/face.evoLVe.PyTorch) face recognizer. 
 
 Project has not 100% done yet.
 TODO:
@@ -13,11 +15,35 @@ TODO:
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package.
 
+To train a new SVM classifier: Use train_classifier.py. Your dataset should be like:
+```
+Dataset
+  -> id1
+    -> id1_1.jpg
+    -> id1_2.jpg
+    ...
+  -> id2
+    -> id1_1.jpg
+    -> id1_2.jpg
+    ...
+  ...
+```
+
+To recognize:
 ```bash
 pip install -r requirement.txt
 ```
 
 NOTE: You need GPU with cuda to run model in realtime
+
+## Performance
+Performance was evaluated on my laptop with AMD Ryzen 7 4800HS and NVIDIA GTX 1660TI Max-Q.
+
+|Model|FPS|
+| ------------- | ------------- |
+|MTCNN + FaceNet + SVM|8 |
+|ULFD + face.evoLVe + SVM| 45|
+
 
 ## Usage
 
